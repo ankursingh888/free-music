@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container flex">
+        <div class="left border">
+            <div class="home m-1 bg-darkgreen" style="border-radius: 10px; margin: 2px;">
+                <img src="assets/clock_animation.svg" style="height: 60px; width: 60px;" alt="logo">
+                <ul>
+                    <li><img src="assets/home.svg" style="filter: invert(1);" class="ht-wd">
+                        <span>Home</span>
+                    </li>
+                    <li><img src="assets/search.svg" alt="search" class="ht-wd">
+                        <span>Search</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="library m-1 bg-darkgreen">
+                <div class="library-header">
+                    <h3 style="font-family: Circular Std,sans-serif;">Your Library</h3>
+                </div>
+                <div class="songList-container">
+                    <ul class="songList" id="song-list-element">
+                        <!-- Dynamically populated songs go here -->
+                    </ul>
+                </div>
+                <div class="footer">
+                    <a href="#">Contact</a>
+                    <a href="#">Support</a>
+                    <a href="#">Legal</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Cookie</a>
+                </div>
+            </div>
+        </div>
+        <div class="right border">
+            <div class="header">
+                <div class="nav">
+                    <a href="#"><img class="bg-darkgreen border" src="assets/left.svg" alt=""></a>
+                    <a href="#"><img class="bg-darkgreen border" src="assets/right.svg" alt=""></a>
+                </div>
+                <div class="button">
+                    <button class="sbtn1">Sign Up</button>
+                    <button class="sbtn2">Login</button>
+                </div>
+            </div>
+            <div class="playlists m-1 bg-darkgreen">
+                <h2 style="font-family: Circular Std,sans-serif;">Your Playlists</h2>
+                <div class="cardscontainer">
+                    <!-- <div class="cards">
+                        <img src="https://i.ytimg.com/vi/tcQDnqRakxk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDB_2ybKmhVd47PBtT8pL545p7FCg"
+                            alt="image here">
+                        <h3>name here</h3>
+                        <p>description</p>
+                    </div>
+                    <div class="cards">
+                        <img src="https://i.ytimg.com/vi/tcQDnqRakxk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDB_2ybKmhVd47PBtT8pL545p7FCg"
+                            alt="image here">
+                        <h3>name here</h3>
+                        <p>description</p>
+                    </div>
+                    <div class="cards">
+                        <img src="https://i.ytimg.com/vi/tcQDnqRakxk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDB_2ybKmhVd47PBtT8pL545p7FCg"
+                            alt="image here">
+                        <h3>name here</h3>
+                        <p>description</p>
+                    </div>
+                    <div class="cards">
+                        <img src="https://i.ytimg.com/vi/tcQDnqRakxk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDB_2ybKmhVd47PBtT8pL545p7FCg"
+                            alt="image here">
+                        <h3>name here</h3>
+                        <p>description</p>
+                    </div>
+                    <div class="cards">
+                        <img src="https://i.ytimg.com/vi/tcQDnqRakxk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDB_2ybKmhVd47PBtT8pL545p7FCg"
+                            alt="image here">
+                        <h3>name here</h3>
+                        <p>description</p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="playbar m-1">
+                <div class="songinfo">
+                    <span class="songname">Now Playing...</span>
+                </div>
+                <div class="play-controls-wrapper">
+                    <div class="playbar-controls">
+                        <button class="playbar-btn" id="prev-btn"><img src="assets/backward.svg"
+                                alt="backward"></button>
+                        <button class="playbar-btn play-btn-main" id="play-btn"><img id="play-icon-img"
+                                src="assets/play-button.svg" alt="play"></button>
+                        <button class="playbar-btn" id="next-btn"><img src="assets/forward.svg" alt="forward"></button>
+                    </div>
+                    <div class="seekbar-container">
+                        <span class="time" id="current-time">0:00</span>
+                        <div class="seekbar" id="main-seekbar">
+                            <div class="seek-progress" id="seek-progress"></div>
+                            <div class="seek-circle" id="seek-circle"></div>
+                        </div>
+                        <span class="time" id="total-time">0:00</span>
+                    </div>
+                </div>
+                <div class="volume-controls">
+                    <button class="playbar-btn" id="volume-btn"><img id="volume-icon-img" src="assets/volume.svg"
+                            alt="volume" style="width: 20px; height: 20px; filter: invert(1);"></button>
+                    <input type="range" id="volume-slider" min="0" max="100" value="70">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
