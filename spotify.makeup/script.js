@@ -218,6 +218,43 @@ function formatTime(seconds) {
     return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-button");
+
+async function performSearch() {
+    if (!searchInput || !searchButton) {
+        return;
+    }
+
+    const q = searchInput.value.trim();
+
+    if (!q) {
+        return;
+    }
+    const response = await fetch(`/api/playlists?search=${encodeURIComponent(q)}`);
+    const data = await response.json();
+    playlists = data;
+    renderPlaylists();
+
+    if (playlists.length > 0) {
+        selectPlaylist(0);
+    }
+}
+
+if (searchButton) {
+    searchButton.addEventListener("click", performSearch);
+}
+
+if (searchInput) {
+    searchInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            performSearch();
+        }
+    });
+}
+
+
 // ==========================================
 // 5. REGISTER EVENT LISTENERS
 // ==========================================

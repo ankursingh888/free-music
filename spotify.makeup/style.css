@@ -44,10 +44,24 @@ body {
     width: 20px;
 }
 
-.home ul li {
-    list-style: none;
+.search{
     display: flex;
+    align-items: center;
     gap: 10px;
+    background-color: rgb(28, 59, 59);
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+.search input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    width: 200px;
+}
+.search img {
+    width: 20px;
+    height: 20px;
 }
 
 .m-1 {

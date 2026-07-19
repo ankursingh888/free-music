@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify</title>
+    <title>Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,14 +13,14 @@
         <div class="left border">
             <div class="home m-1 bg-darkgreen" style="border-radius: 10px; margin: 2px;">
                 <img src="assets/clock_animation.svg" style="height: 60px; width: 60px;" alt="logo">
-                <ul>
+                <!-- <ul>
                     <li><img src="assets/home.svg" style="filter: invert(1);" class="ht-wd">
                         <span>Home</span>
                     </li>
                     <li><img src="assets/search.svg" alt="search" class="ht-wd">
                         <span>Search</span>
                     </li>
-                </ul>
+                </ul> -->
             </div>
             <div class="library m-1 bg-darkgreen">
                 <div class="library-header">
@@ -31,13 +31,13 @@
                         <!-- Dynamically populated songs go here -->
                     </ul>
                 </div>
-                <div class="footer">
+                <!-- <div class="footer">
                     <a href="#">Contact</a>
                     <a href="#">Support</a>
                     <a href="#">Legal</a>
                     <a href="#">Privacy</a>
                     <a href="#">Cookie</a>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="right border">
@@ -46,9 +46,11 @@
                     <a href="#"><img class="bg-darkgreen border" src="assets/left.svg" alt=""></a>
                     <a href="#"><img class="bg-darkgreen border" src="assets/right.svg" alt=""></a>
                 </div>
-                <div class="button">
-                    <button class="sbtn1">Sign Up</button>
-                    <button class="sbtn2">Login</button>
+                <div class="search">
+                    <input id="search-input" type="text" placeholder="Search for songs or tags">
+                    <button id="search-button">
+                        <img src="assets/search.svg" alt="Search">
+                    </button>
                 </div>
             </div>
             <div class="playlists m-1 bg-darkgreen">
